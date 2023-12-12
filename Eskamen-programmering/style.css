@@ -1,0 +1,1444 @@
+/* Generel styling */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FAE6CC;
+}
+
+a {
+  color: #FAE6CC;
+  text-decoration: none;
+}
+
+p, h1, h3, h2, li {
+font-weight: bold;
+}
+
+/*----------------------------------------------*/
+
+/* Navbar start */
+
+.header {
+  background-color: #54301A;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  top: 0;
+}
+
+
+.header ul {
+  margin: 0;
+  padding-right: 2rem;
+  list-style: none;
+  overflow: hidden;
+  background-color: #54301A;
+}
+
+.header li a {
+  display: block;
+  margin-top: 2rem;
+  border-right: 1px solid #FAE6CC;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: rgba(0,0,0,.3);
+  transition: 0.5s;
+}
+
+.header .logo {
+  float: left;
+  padding-left: 2rem;
+  display: flex;
+}
+
+.logo img {
+  width:100%;
+}
+
+.logo {
+  z-index: -1;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  padding-bottom: 1rem;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+  margin-top: 3rem;
+}
+
+.header .menu-icon .navicon {
+  background: #FAE6CC;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 20px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #FAE6CC;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 270px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+} 
+
+/* Navbar slut */
+
+/*----------------------------------------------*/
+
+/* Footer Start */
+
+#footer {
+  background-color: #54301A;
+  height: 35%;
+  width: 100%;
+  position: absolute;
+ 
+}
+
+.footer-center h3 {
+  margin-top: 1rem;
+  text-align: center;
+  color: #FAE6CC;
+  text-decoration: underline 3px;
+}
+
+.footer-center h4 {
+  color: #FAE6CC;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+
+.footer-center p {
+  text-align: center;
+  color: #FAE6CC;
+  line-height: 1.5;
+  margin-top: -1rem;
+  font-weight: lighter;
+}
+
+.forside-kontakt-os p {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  width: 15rem;
+  margin: 0 auto;
+}
+
+.forside-kontakt-os p:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0,.3);
+  transition: 0.5s;
+}
+
+/* Footer Slut */
+
+/*----------------------------------------------*/
+
+/* Forside Start */
+
+.forside-overskrift {
+  margin-top: 9rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.forside-overskrift h1 {
+font-size: 2rem;
+text-align: center;
+}
+
+.forside-velkomst-besked {
+  width: 20rem;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  border: solid 1px black;
+  box-shadow: 2px 4px 5px 4px black;
+  margin-top: -2rem;
+}
+
+.forside-velkomst-besked p {
+  line-height: 1.5;
+  padding: 0.5rem;
+  text-transform: inherit;
+}
+
+.forside-velkomst-figur img {
+  height: 6rem;
+  display: block;
+  margin: -1rem 0 1rem 11rem;
+}
+
+
+/* Forside Nyhed! start */
+
+#forside-nyhed {
+  background-image: url("img/Sne-baggrund1.png");
+  background-size: 150%;
+  z-index: -1;
+}
+
+.forside-nyhed-overskrift {
+  margin-top: 3rem;
+  color: white;
+  padding: 1rem 0;
+  background-color: #54301A;
+  height: 6rem;
+}
+
+.forside-nyhed-overskrift h2, p{
+text-align: center;
+margin-bottom: 1rem;
+}
+
+.forside-nyhed-billeder img {
+  display: block;
+  margin: 0 auto auto 8.7rem;
+  height: 15rem;
+  padding-top: 2.7rem;
+}
+
+.forside-nyhed-se-mere-knap {
+border: 2px white solid; 
+border-radius: 10px;
+width: 7rem;
+display: block;
+margin: 0 auto auto auto;
+height: 3rem;
+background-color: #54301A;
+}
+
+.forside-nyhed-se-mere-knap a {
+  color: #FAE6CC;
+  text-decoration: none;
+}
+
+.forside-nyhed-se-mere-knap:hover {
+  background-color: #0936dd;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.forside-nyhed-figur img {
+  height: 7rem;
+  float: right;
+  margin: -10rem 2rem 0 0;
+}
+
+.forside-kanel img {
+  visibility: hidden;
+}
+
+/* Forside Nyhed! Slut */
+
+/* Forside Slut */
+
+/*----------------------------------------------*/
+
+/* Produkter start */
+
+.produkter-overskrift {
+  margin-top: 12rem;
+  text-align: center;
+}
+
+.produkter-forord {
+  width: 20rem;
+  text-align: center;
+  display: block;
+  margin: 2rem auto auto auto;
+  border: solid 1px black;
+  box-shadow: 2px 4px 5px 4px black;
+  padding: 1rem;
+}
+
+.produkter-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.produkter-card {
+  width: 100%;
+  max-width: 300px;
+  margin: 3rem 0;
+  overflow: hidden;
+}
+
+
+.produkter-card img {
+  width: 90%;
+  margin: 0 1rem;
+}
+
+.produkter-card img:hover {
+  transform: translate(0px, -8px);
+}
+
+.produkter-card-content {
+  padding: 20px;
+  background-color: #54301A;
+  border-radius: 8px;
+}
+
+.produkter-card-content a {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.produkter-card-content a:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0,.3);
+  transition: 0.5s;
+  width: 6rem;
+  border-radius: 10px;
+}
+
+.produkter-card-content-1 {
+  padding: 20px;
+  background-color: #54301A;
+  border-radius: 8px;
+}
+
+.produkter-card-content-1 a {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.produkter-card-content-1 a:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0,.3);
+  transition: 0.5s;
+  width: 6rem;
+  border-radius: 10px;
+}
+
+.produkter-card-content-2 {
+  padding: 20px;
+  background-color: #54301A;
+  border-radius: 8px;
+}
+
+.produkter-card-content-2 a {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.produkter-card-content-2 a:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0,.3);
+  transition: 0.5s;
+  width: 6rem;
+  border-radius: 10px;
+}
+
+.produkter-card-content-3 {
+  padding: 30px;
+  background-color: #54301A;
+  border-radius: 8px;
+}
+
+.produkter-card-content-3 a {
+  margin: -.5rem auto 1rem auto;
+  display: block;
+  text-align: center;
+}
+
+.produkter-card-content-3 a:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0,.3);
+  transition: 0.5s;
+  width: 6rem;
+  border-radius: 10px;
+}
+
+.produkter-card-content-4 {
+  padding: 20px;
+  background-color: #54301A;
+  border-radius: 8px;
+}
+
+.produkter-card-content-4 a {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.produkter-card-content-4 a:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0,.3);
+  transition: 0.5s;
+  width: 6rem;
+  border-radius: 10px;
+}
+
+.produkter-card h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #FAE6CC;
+  text-align: center;
+}
+
+.produkter-card p {
+  color: #FAE6CC;
+  line-height: 1.4;
+}
+
+.produkter-figur {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.produkter-figur img {
+  margin: 1rem auto;
+  display: block;
+  width: 80%;
+ padding-left: 2.5rem;
+}
+
+/* Animation på carachter på produkt side start */
+
+.produkter-figur img:hover {
+  animation: jiggle 0.5s;
+
+  
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes jiggle {
+  0% {transform: rotate(0deg) scale(1,1);}
+  /* midway rotate 2deg right */
+  50% {transform: rotate(2deg) scale(1,1);}
+  /* end rotate -2deg left */
+  100% {transform: rotate(-2deg) scale(1,1)}
+}
+
+/* Animation på carachter på produkt side slut */
+
+
+/* **Billedet i blåbær card drillede, så den har fået egen class stiling, så alt passede** */
+.produkter-card-1 {
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 60rem;
+}
+
+
+.produkter-card-1 img {
+  width: 110%;
+  height: 70%;
+  margin-top: -2rem;
+  margin-left: -1rem;
+  
+}
+
+.produkter-card-1 img:hover {
+  transform: translate(0px, -8px);
+}
+
+.produkter-card-content-1 {
+  padding: 20px;
+}
+
+.produkter-card-1 h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #FAE6CC;
+  text-align: center;
+}
+
+.produkter-card-1 p {
+  color: #FAE6CC;
+  line-height: 1.4;
+}
+
+/* Produkter slut */
+
+/*----------------------------------------------*/
+
+/* Produkt information start */
+
+/*----------------------------------------------*/
+
+/* Generelt til produkterne */
+
+.tilbage-til-produkterne {
+  float: right;
+  width: 50%;
+  margin-top: -3.5rem;
+  margin-right: 1rem;
+}
+
+.tilbage-til-produkterne p {
+  color: black;
+  font-size: .8rem;
+  text-decoration: underline black;
+  text-align: right;
+}
+
+.produkt-oversigt-overskrift {
+  margin-top: 14rem;
+  text-align: center;
+}
+
+.produkt-oversigt img {
+margin: 2rem auto;
+width: 80%;
+display: block;
+}
+
+.produkt-oversigt-om {
+  border: solid 1px black;
+  box-shadow: 2px 4px 5px 4px black;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.produkt-oversigt-om img {
+  float: left;
+  width: 30%;
+  z-index: 100;
+  margin-top: -20rem;
+  padding-left: 1.2rem;
+}
+
+.produkt-oversigt-om p {
+  padding: 1rem;
+  width: 90%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.produkt-oversigt-om h3 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+
+.produkter-hvaderderi {
+  background-color: #54301A;
+  width: 70%;
+  margin: 2rem auto;
+  border-radius: 7px;
+}
+
+.produkter-hvaderderi img {
+  margin: 0 auto;
+  display: block;
+}
+
+/*Generelt til produkterne slut */
+
+/*----------------------------------------------*/
+
+/* IPA produkt Start */
+.produkt-oversigt-om-ipa {
+  border: solid 1px black;
+  box-shadow: 2px 4px 5px 4px black;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+
+.produkt-oversigt-ipa img {
+margin: 2rem auto;
+width: 80%;
+display: block;
+}
+
+.produkt-oversigt-om-ipa img {
+  float: left;
+  width: 25%;
+  z-index: 100;
+  margin-top: -16.5rem;
+  padding-left: 2rem;
+}
+
+.produkt-oversigt-om-ipa p {
+  padding: 1rem;
+  width: 90%;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.produkt-oversigt-om-ipa h3 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  text-transform: capitalize;
+}
+
+/* IPA Produkt Slut /*
+
+/* Produkt information slut */
+
+/*----------------------------------------------*/
+
+/* Hvorfor alkoholfri? Start */
+
+.hvorfor-overskrift {
+  margin-top: 12rem;
+  text-align: center;
+}
+
+.hvorfor-forord {
+  width: 72%;
+  margin: 0 auto;
+  border: solid 1px black;
+  box-shadow: 2px 4px 5px 4px black;
+  padding: 1rem;
+}
+
+.hvorfor-godtellerskidt-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.hvorfor-godtellerskidt {
+  display: block;
+  margin: 0 auto;
+}
+
+.hvorfor-godtellerskidtimg img {
+ width: 0;
+}
+
+.hvorfor-godtellerskidt {
+  width: 70%;
+  padding: 1rem;
+}
+
+.hvorfor-godtellerskidt h4 {
+  font-size: 1.5rem;
+}
+
+.hvorfor-mellemord {
+  display: block;
+  margin: 3rem auto;
+  width: 85%;
+  text-align: center;
+}
+
+.hvorfor-mellemord h5 {
+  font-size: 1.7rem;
+}
+
+.hvorfor-kildetekst-link-tekst {
+  margin-top: 3rem;
+}
+
+.hvorfor-kildetekst-link-tekst h6 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1rem;
+  width: 80%;
+}
+
+
+.hvorfor-kildetekst {
+  width: 15rem;
+  margin: 0 auto;
+}
+
+.hvorfor-kildetekst p {
+  color: black;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.hvorfor-kildetekst p:hover {
+  color: #0936dd;
+}
+
+/* Hvorfor alkoholfri? Slut */
+
+/*----------------------------------------------*/
+
+/* Kontakt Start */
+
+.kontakt-container {
+  width: 90%;
+  margin: -12rem auto -2rem auto;
+}
+
+.kontakt-overkskrift h1 {
+  text-align: center;
+  margin-top: 15rem;
+}
+
+.kontakt-form {
+  background-color: #54301A;
+  padding: 20px;
+  border: 1px solid #ddd;
+  height: 32rem;
+  margin-top: 2rem;
+  border-radius: 7px;
+}
+
+input {
+  width: 85%;
+  padding: 10px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  height: 2rem;
+  resize: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-radius: 7px
+}
+
+textarea {
+  width: 85%;
+  padding: 10px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  height: 5rem;
+  resize: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-radius: 7px
+}
+
+input[type=submit] {
+  background-color: #FAE6CC;
+  color: black;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-radius: 4px;
+}
+
+input[type=submit]:hover {
+  background-color: rgba(0,0,0,.3);
+  color: white;
+  transition: .3s;
+}
+
+.kontakt-figur-venstre img {
+  margin-top: 12rem;
+  margin-right: 5rem;
+  width: 0%;
+}
+
+.kontakt-figur-hoejre img {
+margin: 2rem auto 5rem auto;
+display: block;
+width: 40%;
+}
+
+/* Kontakt slut */
+
+
+
+
+
+/*----------------------------------------------*/ 
+
+/* @media til desktop start */
+@media (min-width: 768px) {
+
+ /* @media Navbar Start */
+
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  
+  .logo {
+    padding: 0;
+    float: left;
+  }
+/* @media Navbar Slut */
+
+/*----------------------------------------------*/
+
+/* @media Footer start */
+
+#footer {
+  display: flex;
+}
+
+.footer-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-center h3 {
+  font-size: 2rem;
+}
+
+/* @media Footer slut */
+
+/*----------------------------------------------*/
+
+/* @media Forside Start */
+
+.forside-overskrift {
+  margin: 9rem auto auto auto;
+  text-align: center;
+}
+
+.forside-velkomst-besked {
+  width: 40rem;
+  height: 30rem;
+  text-align: center;
+  font-size: 1.3rem;
+  border: none;
+  box-shadow: none;
+}
+
+.forside-velkomst-figur img {
+  height: 10rem;
+  margin-left: auto;
+}
+
+#forside-nyhed {
+  background-image: url("img/Sne-baggrund1.png");
+  background-size: 55%;
+  background-position: center;
+  zoom: 100%;
+  width: 100%;
+  height: 35rem;
+}
+
+.forside-nyhed-billeder {
+  display: flex;
+  flex-direction: row;
+}
+
+.forside-nyhed-billeder img{
+  margin: 0 auto;
+  display: block;
+}
+
+.forside-nyhed-figur img {
+  float: right;
+  margin: -9rem 25rem 0 0;
+  height: 13rem;
+}
+
+.forside-nyhed-figur #kanel {
+  float: right;
+  height: 13rem;
+  z-index: 100;
+  display: inline ;
+}
+
+.forside-kanel img {
+  visibility: visible;
+}
+
+.forside-nyhed-se-mere-knap {
+  margin-top: .7rem;
+}
+
+/* @media Forside Slut */
+
+/*----------------------------------------------*/
+
+/* @media Produkter start */
+
+.produkter-card, .produkter-card-1 {
+  flex: 0 1 calc(50% - 16px);
+  margin: 6rem;
+}
+
+
+.produkter-card-1 img {
+height: 63%;
+}
+
+.produkter-forord {
+  width: 60rem;
+  height: 19rem;
+  text-align: center;
+  display: block;
+  margin: 2rem auto auto auto;
+  font-size: 1.4rem;
+  padding: 1rem;
+  border: none;
+  box-shadow: none;
+}
+
+.produkter-figur img {
+  margin: 1rem auto;
+  display: block;
+  width: 20%;
+}
+
+
+.produkter-card-content-1 {
+  padding: 20px;
+  background-color: #54301A;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.produkter-card-content-2 {
+  padding: 20px;
+  background-color: #54301A;
+  border-radius: 8px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.produkter-card-content-3 {
+  padding: 16px;
+  background-color: #54301A;
+  border-radius: 8px;
+  margin-top: -1.2rem;
+  text-align: center;
+}
+
+.produkter-card-content-4 {
+  padding: 20px;
+  background-color: #54301A;
+  border-radius: 8px;
+  margin-top: 2.3rem;
+  text-align: center;
+}
+
+
+/* @media Produkter slut */
+
+/*----------------------------------------------*/
+
+/* @media Produkt information start */
+
+.tilbage-til-produkterne {
+  margin-right: 10rem;
+}
+
+.tilbage-til-produkterne p {
+  font-size: 1rem;
+}
+
+.produkter-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.produkt-oversigt img {
+  margin: 1rem auto;
+  width: 40%;
+  display: block;
+  }
+
+  .produkt-oversigt-om {
+    width: 40%;
+    margin-right: 27rem;
+    margin-top: -4rem;
+    border: none;
+    box-shadow: none;
+  }
+
+  .produkt-oversigt-om img {
+    float: left;
+    width: 30%;
+    z-index: 100;
+    margin-top: -18rem;
+    padding-left: 1.2rem;
+  }
+
+  .produkt-oversigt-om p {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .produkt-oversigt-om h3 {
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
+
+  .produkt-oversigt-ipa img {
+    margin: 1rem auto;
+    width: 50%;
+    display: block;
+    }
+  
+    .produkt-oversigt-om-ipa {
+      width: 40%;
+      margin-right: 27rem;
+      margin-top: -8rem;
+      border: none;
+      box-shadow: none;
+    }
+  
+    .produkt-oversigt-om-ipa img {
+      visibility: hidden;
+    }
+  
+    .produkt-oversigt-om-ipa p {
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+    }
+    
+    .produkt-oversigt-om-ipa h3 {
+      text-align: center;
+      margin-top: 5rem;
+      font-size: 1.5rem;
+      text-transform: capitalize;
+    }
+
+    .produkter-hvaderderi {
+      background-color: #54301A;
+      width: 40%;
+      height: 20%;
+      margin-top: 10rem;
+      margin-right: 10rem;
+      border-radius: 7px;
+    }
+    
+    .produkter-hvaderderi img {
+      margin: 0 auto;
+      display: block;
+      width: 90%;
+    }
+
+
+/* @media Produkt information slut */
+
+/*----------------------------------------------*/
+
+/* @media Hvorfor alkoholfri øl? Start */
+
+.hvorfor-godtellerskidt-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+}
+
+.hvorfor-godtellerskidt {
+  display: block;
+  flex-direction: row;
+  width: 40%;
+  margin-left: 15rem;
+}
+
+.hvorfor-godtellerskidtimg {
+  margin-right: 15rem;
+  margin-top: 10rem;
+}
+
+.hvorfor-godtellerskidtimg img {
+width: 100%;
+}
+
+.hvorfor-forord {
+  width: 60%;
+  border: none;
+  box-shadow: none;
+  font-size: 1.5rem;
+}
+
+.hvorfor-mellemord {
+  text-align: center;
+  width: 60%;
+}
+
+.hvorfor-kildetekst-link-tekst {
+  font-size: 1rem;
+  text-decoration: underline;
+}
+
+/* @media Hvorfor alkoholfri øl? Slut */
+
+/*----------------------------------------------*/
+
+/* @media Kontakt start */
+
+.kontakt-overkskrift {
+  margin-top: 12rem;
+  text-align: center;
+  margin-left: 5rem;
+}
+
+.kontakt-container {
+  width: 95%;
+  height: 50rem;
+  display: flex;
+  flex-direction: row;
+  margin: 2rem auto 0 auto;
+}
+
+.kontakt-container h1 {
+  margin-top: -8rem;
+  display: block;
+}
+
+.kontakt-figur-venstre img {
+  margin-top: 12rem;
+  margin-right: 4rem;
+  width: 18rem;
+  height: 18rem;
+}
+
+.kontakt-figur-hoejre img {
+ margin-top: 12rem;
+ margin-left: 4rem;
+ width: 13rem;
+ height: 18rem;
+}
+
+.kontakt-form {
+  width: 90%;
+  height: 40rem;
+  border-radius: 10px;
+}
+
+input {
+  margin-left: 3.5rem;
+  height: 3rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+textarea {
+  margin-left: 3.5rem;
+  height: 6rem;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+input[type=submit] {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* @media Kontakt slut */
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 1920px) {
+  /* CSS rules for big desktop screens */
+
+  #forside-nyhed {
+    background-image: url("img/Sne-baggrund1.png");
+    background-size: 55%;
+    background-position: center;
+    zoom: 130%;
+    width: 100%;
+    height: 35rem;
+  }
+  
+  .forside-nyhed-billeder {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .forside-nyhed-billeder img{
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .forside-nyhed-figur img {
+    float: right;
+    margin: -9rem 25rem 0 0;
+    height: 13rem;
+  }
+  
+  .forside-nyhed-figur #kanel {
+    float: right;
+    height: 13rem;
+    z-index: 100;
+    display: inline ;
+  }
+  
+  .forside-kanel img {
+    visibility: visible;
+  }
+  
+  .forside-nyhed-se-mere-knap {
+    margin-top: .7rem;
+  }
+
+
+  .produkter-card {
+    flex: 0 1 calc(33.333% - 40px);
+    margin: 3rem 8rem;
+  }
+  
+  .produkter-card-1 {
+    flex: 0 1 calc(33.333% - 40px);
+    margin: 1rem 8rem;
+  }
+  
+  .produkter-card-1 img {
+  height: 63%;
+  }
+  
+  .produkter-forord {
+    width: 60rem;
+    height: 19rem;
+    text-align: center;
+    display: block;
+    margin: 2rem auto auto auto;
+    font-size: 1.4rem;
+    padding: 1rem;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .produkter-figur img {
+    margin: 1rem auto;
+    display: block;
+    width: 20%;
+  }
+  
+  
+  .produkter-card-content-1 {
+    padding: 20px;
+    background-color: #54301A;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .produkter-card-content-2 {
+    padding: 20px;
+    background-color: #54301A;
+    border-radius: 8px;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .produkter-card-content-3 {
+    padding: 20px;
+    background-color: #54301A;
+    border-radius: 8px;
+    margin-top: .4rem;
+    text-align: center;
+  }
+  
+  .produkter-card-content-4 {
+    padding: 20px;
+    background-color: #54301A;
+    border-radius: 8px;
+    margin-top: 2.3rem;
+    text-align: center;
+  }
+  
+  
+  /* @media Produkter slut */
+  
+  /*----------------------------------------------*/
+  
+  /* @media Produkt information start */
+  
+  .tilbage-til-produkterne {
+    margin-right: 10rem;
+  }
+  
+  .tilbage-til-produkterne p {
+    font-size: 1rem;
+  }
+  
+  .produkter-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .produkt-oversigt img {
+    margin: 1rem auto;
+    width: 40%;
+    display: block;
+    }
+  
+    .produkt-oversigt-om {
+      width: 40%;
+      margin-right: 27rem;
+      margin-top: -4rem;
+      border: none;
+      box-shadow: none;
+    }
+  
+    .produkt-oversigt-om img {
+      float: left;
+      width: 30%;
+      z-index: 100;
+      margin-top: -18rem;
+      padding-left: 1.2rem;
+    }
+  
+    .produkt-oversigt-om p {
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+    }
+    
+    .produkt-oversigt-om h3 {
+      text-align: center;
+      margin-top: 5rem;
+      font-size: 1.5rem;
+      text-transform: capitalize;
+    }
+  
+    .produkt-oversigt-ipa img {
+      margin: 1rem auto;
+      width: 50%;
+      display: block;
+      }
+    
+      .produkt-oversigt-om-ipa {
+        width: 40%;
+        margin-right: 27rem;
+        margin-top: -8rem;
+        border: none;
+        box-shadow: none;
+      }
+    
+      .produkt-oversigt-om-ipa img {
+        visibility: hidden;
+      }
+    
+      .produkt-oversigt-om-ipa p {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+      }
+      
+      .produkt-oversigt-om-ipa h3 {
+        text-align: center;
+        margin-top: 5rem;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+      }
+  
+      .produkter-hvaderderi {
+        background-color: #54301A;
+        width: 40%;
+        height: 20%;
+        margin-top: 10rem;
+        margin-right: 10rem;
+        border-radius: 7px;
+      }
+      
+      .produkter-hvaderderi img {
+        margin: 0 auto;
+        display: block;
+        width: 90%;
+      }
+
+}
+/*----------------------------------------------*/
+
+/* @media til desktop slut */
+
+/*----------------------------------------------*/
+
+
+
+
